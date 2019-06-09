@@ -21,5 +21,9 @@ RUN apt-get update && \
    apt-get update && \
    apt-get -y install docker-ce
 
+# add jenkins to the docker group
+usermod -a -G docker jenkins
+
 # change back to jenkins user
 USER jenkins
+
