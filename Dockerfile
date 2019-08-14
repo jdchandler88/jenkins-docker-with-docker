@@ -8,11 +8,11 @@ USER root
 
 ## install QT 
 #install gcc
-RUN sudo apt-get install libdbus-1-dev
-RUN sudo apt-get install build-essential
-RUN sudo apt-get install libfontconfig1
-RUN sudo apt-get install mesa-common-dev
-RUN sudo apt-get install libglu1-mesa-dev -y
+RUN apt-get install libdbus-1-dev
+RUN apt-get install build-essential
+RUN apt-get install libfontconfig1
+RUN apt-get install mesa-common-dev
+RUN apt-get install libglu1-mesa-dev -y
 
 #download qt installer
 RUN wget http://download.qt.io/official_releases/qt/5.13/5.13.0/qt-opensource-linux-x64-5.13.0.run
