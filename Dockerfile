@@ -8,12 +8,15 @@ USER root
 
 ## install QT 
 #download qt installer
-RUN wget http://download.qt.io/official_releases/qt/5.7/5.7.0/qt-opensource-linux-x64-5.7.0.run
+RUN wget http://download.qt.io/official_releases/qt/5.13/5.13.0/qt-opensource-linux-x64-5.13.0.run
 #execute it
 RUN chmod +x qt-opensource-linux-x64-5.7.0.run
 RUN ./qt-opensource-linux-x64-5.7.0.run
 #install gcc
 RUN sudo apt-get install build-essential
+RUN sudo apt-get install libfontconfig1
+RUN sudo apt-get install mesa-common-dev
+RUN sudo apt-get install libglu1-mesa-dev -y
 
 
 
