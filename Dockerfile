@@ -6,6 +6,18 @@ MAINTAINER jdchandler88@gmail.com
 # change to root so we can install docker tools
 USER root
 
+## install QT 
+#download qt installer
+RUN wget http://download.qt.io/official_releases/qt/5.7/5.7.0/qt-opensource-linux-x64-5.7.0.run
+#execute it
+RUN chmod +x qt-opensource-linux-x64-5.7.0.run
+RUN ./qt-opensource-linux-x64-5.7.0.run
+#install gcc
+RUN sudo apt-get install build-essential
+
+
+
+
 # Install the latest Docker CE binaries
 RUN apt-get update && \
     apt-get -y install apt-transport-https \
